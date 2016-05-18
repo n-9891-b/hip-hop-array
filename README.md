@@ -1,8 +1,5 @@
-# hip-hop-array
-MKS Greenfield Project
-# Space Kitten
-
-> Pithy project description
+# HipHopArray
+>MKS Greenfield Project
 
 ## Team
 
@@ -11,7 +8,6 @@ MKS Greenfield Project
   - __Development Team Members__: Nate Blain, Chee Kim, Gina Zhou, Adam Behrens
 
 ## Table of Contents
-
 1. [Usage](#Usage)
 1. [Requirements](#requirements)
 1. [Development](#development)
