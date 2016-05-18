@@ -1,0 +1,17 @@
+{
+  "name": "hip-hop-array",
+  "homepage": "https://github.com/n-9891-b/hip-hop-array",
+  "authors": [
+    "Nate Blain <blain89@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
