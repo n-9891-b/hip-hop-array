@@ -32,15 +32,15 @@ bower install
 ```
 
 ## Team Bios
->Nate Blain
+Nate Blain
 - Github profile: 
 - Tech interests:
->Chee Kim
+Chee Kim
 - Github profile: 
 - Tech interests:
->Gina Zhou
+Gina Zhou
 - Github profile: 
 - Tech interests:
->Adam Behrens
+Adam Behrens
 - Github profile: 
 - Tech interests:
