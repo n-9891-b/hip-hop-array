@@ -30,17 +30,18 @@ sudo npm install -g bower
 npm install
 bower install
 ```
+Grunt file coming soon!!
 
 ## Team Bios
 - __Nate Blain__:
-  - Github profile: 
-  - Tech interests:
+  - Github profile: https://github.com/n-9891-b
+  - Tech interests: management systems, application speed / optimization and backend ninja-ing
 - __Chee Kim__:
-- Github profile: 
-- Tech interests:
+  - Github profile: https://github.com/ckim16
+  - Tech interests: nodebot, drones and machine learning
 -__Gina Zhou__:
-- Github profile: 
-- Tech interests:
+  - Github profile: https://github.com/g1na1011
+  - Tech interests: social media, mobile gaming and virtual reality
 -__Adam Behrens__:
-- Github profile: 
-- Tech interests:
+  - Github profile: https://github.com/abe732
+  - Tech interests: artificial intelligence, machine learning and industrial software
