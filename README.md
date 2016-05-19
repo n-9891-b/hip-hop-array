@@ -1,5 +1,5 @@
 # HipHopArray
->MKS Greenfield Project
+>Sick of free styling dinner, the Hip Hop Array concats pictures of food to give you on the fly recipe suggestions. Use it in the grocery store when you're shopping to get ideas for what you can do based on what looks good in person. Additionally, use it to hack the recipes at your favorite restaurants by taking a photo of that meal you gave 5 Yelp stars to with the Tinder date that never texted back. The Hip Hop Array won't stand you up on a Friday night after a long week at work.
 
 ## Team
 
@@ -9,43 +9,39 @@
 
 ## Table of Contents
 1. [Usage](#Usage)
-1. [Requirements](#requirements)
 1. [Development](#development)
     1. [Installing Dependencies](#installing-dependencies)
     1. [Tasks](#tasks)
-1. [Team](#team)
-1. [Contributing](#contributing)
+1. [Team Bios](#team-bios)
 
 ## Usage
-
-> Some usage instructions
->Heroku link: blooming-coast-87569
-
-## Requirements
-
-- Node 0.10.x
-- Redis 2.6.x
-- Postgresql 9.1.x
-- etc
-- etc
+>Currently a web app, upload photos by draggin and dropping to the site
+>Mobile functionality coming soon!
+>Find our app at: blooming-coast-87569
 
 ## Development
+- Node / Express
+- Angular
 
 ### Installing Dependencies
-
 From within the root directory:
-
 ```sh
 sudo npm install -g bower
 npm install
 bower install
 ```
 
-### Roadmap
+## Team Bios
+>Nate Blain
+>>Github profile: 
+>>Tech interests:
+>Chee Kim
+>>Github profile: 
+>>Tech interests:
+>Gina Zhou
+>>Github profile: 
+>>Tech interests:
+>Adam Behrens
+>>Github profile: 
+>>Tech interests:
 
-View the project roadmap [here](LINK_TO_PROJECT_ISSUES)
-
-
-## Contributing
-
-See [CONTRIBUTING.md](https://github.com/unexpected-lion/ourglass/blob/master/contributing.md) for contribution guidelines.
