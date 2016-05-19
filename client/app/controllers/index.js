@@ -6,7 +6,7 @@ angular.module('app.index', ['ngRoute'])
   $routeProvider
   .when('/', {
     // not sure about the route name
-    templateUrl: './views/index.html', 
+    templateUrl: '/./views/index.html', 
     controller: 'indexCtrl'
   })
 })

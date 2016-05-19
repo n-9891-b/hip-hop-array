@@ -1,0 +1,25 @@
+{
+  "name": "hip-hop-array",
+  "version": "1.0.0",
+  "description": ">MKS Greenfield Project",
+  "main": "gruntfile.js",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "init": "^0.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g1na1011/hip-hop-array.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/g1na1011/hip-hop-array/issues"
+  },
+  "homepage": "https://github.com/g1na1011/hip-hop-array#readme"
+}
