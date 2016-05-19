@@ -4,7 +4,7 @@
 >Hip Hop Array is best used:
 - At the grocery store when you're shopping to get ideas for what you can do based on what looks good in person
 - At home when you're staring at the fridge looking at about-to-go stale produce
-- At a restaurant when you love the food, and Tinder date gets up to go to the bathroom
+- At a restaurant when you love the food, but not your Tinder date
 
 >The Hip Hop Array won't stand you up on a Friday night after a long week at work.
 
