@@ -22,8 +22,9 @@
 1. [Team Bios](#team-bios)
 
 ## Usage
->Currently a web app, upload photos by draggin and dropping to the site
--Find our app at: blooming-coast-87569
+>Currently a web app, upload photos by draggin' and droppin' to the site
+
+- Find our app at: blooming-coast-87569
 - Mobile functionality coming soon!
 
 ## Development
