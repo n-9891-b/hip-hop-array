@@ -41,10 +41,10 @@ Grunt file coming soon!!
   - Github profile: https://github.com/ckim16
   - Tech interests: nodebot, drones and machine learning
 
--__Gina Zhou__:
+- __Gina Zhou__:
   - Github profile: https://github.com/g1na1011
   - Tech interests: social media, mobile gaming and virtual reality
 
--__Adam Behrens__:
+- __Adam Behrens__:
   - Github profile: https://github.com/abe732
   - Tech interests: artificial intelligence, machine learning and industrial software
