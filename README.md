@@ -16,8 +16,8 @@
 
 ## Usage
 >Currently a web app, upload photos by draggin and dropping to the site
->Mobile functionality coming soon!
->Find our app at: blooming-coast-87569
+-Find our app at: blooming-coast-87569
+- Mobile functionality coming soon!
 
 ## Development
 - Node / Express
@@ -33,15 +33,14 @@ bower install
 
 ## Team Bios
 >Nate Blain
->>Github profile: 
->>Tech interests:
+- Github profile: 
+- Tech interests:
 >Chee Kim
->>Github profile: 
->>Tech interests:
+- Github profile: 
+- Tech interests:
 >Gina Zhou
->>Github profile: 
->>Tech interests:
+- Github profile: 
+- Tech interests:
 >Adam Behrens
->>Github profile: 
->>Tech interests:
-
+- Github profile: 
+- Tech interests:
