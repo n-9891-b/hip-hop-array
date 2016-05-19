@@ -1,7 +1,8 @@
-var express = require('express');
-var bodyParser = require('body-parser');
 
-var app = express();
 
-app.use(bodyParser.json());
-app.use()
+module.exports = function (app, express) {
+
+  app.use(express.static(__dirname + '/../../config/views'));
+  app.use('/api/photo', );
+
+};
