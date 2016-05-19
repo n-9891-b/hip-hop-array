@@ -24,7 +24,7 @@
 ## Usage
 >Currently a web app, upload photos by draggin' and droppin' to the site
 
-- Find our app at: blooming-coast-87569
+- Find our app at: https://blooming-coast-87569.herokuapp.com/
 - Mobile functionality coming soon!
 
 ## Development
