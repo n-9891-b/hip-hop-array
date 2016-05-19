@@ -1,8 +1,12 @@
-
+var bodyParser = require('body-parser');
 
 module.exports = function (app, express) {
 
-  app.use(express.static(__dirname + '/../../config/views'));
-  app.use('/api/photo', );
+var router = express.Router();
+
+  app.use(bodyParser.json());
+  app.use('/api/photo', router);
+
+  require('./router.js')(router);
 
 };
