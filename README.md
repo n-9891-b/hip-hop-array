@@ -1,5 +1,12 @@
 # HipHopArray
->Sick of free styling dinner, the Hip Hop Array concats pictures of food to give you on the fly recipe suggestions. Use it in the grocery store when you're shopping to get ideas for what you can do based on what looks good in person. Additionally, use it to hack the recipes at your favorite restaurants by taking a photo of that meal you gave 5 Yelp stars to with the Tinder date that never texted back. The Hip Hop Array won't stand you up on a Friday night after a long week at work.
+>Sick of free styling dinner, the Hip Hop Array concats pictures of food to give you on the fly recipe suggestions.
+
+>Hip Hop Array is best used:
+- At the grocery store when you're shopping to get ideas for what you can do based on what looks good in person
+- At home when you're staring at the fridge looking at about-to-go stale produce
+- At a restaurant when you love the food, and Tinder date gets up to go to the bathroom
+
+>The Hip Hop Array won't stand you up on a Friday night after a long week at work.
 
 ## Team
 
