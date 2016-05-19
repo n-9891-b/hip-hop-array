@@ -33,14 +33,14 @@ bower install
 
 ## Team Bios
 - __Nate Blain__:
--- Github profile: 
--- Tech interests:
+  - Github profile: 
+  - Tech interests:
 - __Chee Kim__:
 - Github profile: 
 - Tech interests:
 -__Gina Zhou__:
 - Github profile: 
 - Tech interests:
--__Adam Behrens_:
+-__Adam Behrens__:
 - Github profile: 
 - Tech interests:
