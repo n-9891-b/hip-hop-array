@@ -1,11 +1,13 @@
-'use strict';
-
 angular.module('app', [
-  'ngRoute',
-  'app.index'
+  'app.fileUpload',
+  'ngRoute'
 ])
 .config(function($routeProvider) {
   $routeProvider
+  .when('/', {
+    templateUrl: 'app/views/fileUpload.html', 
+    controller: 'fileUploadCtrl'
+  })
   .otherwise({
     redirectTo: '/'
   })
