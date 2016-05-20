@@ -9,16 +9,12 @@
 
 <div>
   <h4>Upload on file select</h4>
-    <button ngf-select="uploadFiles($files, $invalidFiles)" multiple accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">Select Files</button>
-    <br><br>
-    Files:
-    <ul>
-      <li ng-repeat="f in files" style="font:smaller">{{f.name}} {{f.$errorParam}}
-        <span class="progress" ng-show="f.progress >= 0">
-          <div style="width:{{f.progress}}%" ng-bind="f.progress + '%'"></div>
-        </span>
-      </li>
-      <li ng-repeat="f in errFiles" style="font:smaller">{{f.name}} {{f.$error}} {{f.$errorParam}}</li> 
-    </ul>
-  {{errorMsg}}
+  <form name="form">
+    Select file(s)
+    <br>
+    <button class="button" ngf-select ng-model="files" ngf-multiple="true">Select</button>
+    <br>
+    Drop files: <div style='width:100px;height:100px;border-style:dotted' ngf-drop ng-model="files" class="drop-box">Drop</div>
+    <button type="submit" ng-click="submitImages()">submit</button>
+  </form>
 </div>
