@@ -2,11 +2,11 @@
 
 angular.module('app.fileUpload', ['ngFileUpload'])
 
-.controller('fileUploadCtrl', function($scope, imageUrl, $location, Upload, $timeout, recipesFactory) {
+.controller('fileUploadCtrl', function($scope, imageUrlFactory, $location, Upload, $timeout, ingredientsFactory) {
   $scope.submitUrl = function(url) {
-    imageUrl.sendUrl(url, function(data) {
-      recipesFactory.setRecipes(data);
-      $location.path('/recipes');
+    imageUrlFactory.sendUrl(url, function(data) {
+      ingredientsFactory.setIngredient(data);
+      $location.path('/ingredients');
     });
   };
 
@@ -32,9 +32,4 @@ angular.module('app.fileUpload', ['ngFileUpload'])
       });
     });
   };
-
-  $scope.displayRecipes = function(recipes) {
-    $scope.recipes = recipes.recipes;
-    $location.path('/recipes');
-  }
 });

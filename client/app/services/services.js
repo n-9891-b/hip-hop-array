@@ -2,7 +2,7 @@
 
 angular.module('app.services', [])
 
-.factory('imageUrl', function($http) {
+.factory('imageUrlFactory', function($http) {
 
   function sendUrl(url, cb) {
     return $http({
@@ -14,7 +14,7 @@ angular.module('app.services', [])
       cb(response.data);
     })
     .catch(function() {
-      console.error('error during recipe API fetch');
+      console.error('error during ingredient API fetch');
     })
   }
 
@@ -23,19 +23,19 @@ angular.module('app.services', [])
   };
 })
 
-.factory('recipesFactory', function() {
-  var recipes = '';
+.factory('ingredientsFactory', function() {
+  var ingredient = '';
 
-  function setRecipes(recipesResponse) {
-    recipes = recipesResponse;
+  function setIngredient(ingredientResponse) {
+    ingredient = ingredientResponse;
   }
 
-  function getRecipes() {
-    return recipes;
+  function getIngredient() {
+    return ingredient;
   }
 
   return {
-    getRecipes: getRecipes,
-    setRecipes: setRecipes
+    getIngredient: getIngredient,
+    setIngredient: setIngredient
   }
 })
