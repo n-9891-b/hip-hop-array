@@ -5,7 +5,9 @@ var requestHandler = require('./config/request-handlers.js');
 var port = process.env.PORT || 4568;
 
 var app = express();
+
 require('./config/config.js')(app, express);
+
 app.use(bodyParser.json());
 // app.use(express.static(__dirname + '/../client/'));
 
