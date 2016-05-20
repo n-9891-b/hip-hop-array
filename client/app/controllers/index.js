@@ -1,8 +1,10 @@
 'use strict';
-angular.module('app.fileUpload', [
+
+angular.module('app', [
 ])
 
-.controller('fileUploadCtrl', function($scope) {
+.controller('app.fileUploadCtrl', function($scope) {
+
   $scope.url = '';
 
   $scope.poop = function() {
