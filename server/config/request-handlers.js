@@ -9,7 +9,7 @@ module.exports = {
     var imageURL1 = req.body.imageUrl;//"https://upload.wikimedia.org/wikipedia/commons/8/88/Bright_red_tomato_and_cross_section02.jpg"; req.body.image
 
 
-    req.photoAnalysisReq(imageURL1);
+    request.photoAnalysisReq(imageURL1, res);
     //return compiled
   }
 };
