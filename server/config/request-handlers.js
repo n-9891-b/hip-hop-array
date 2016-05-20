@@ -12,6 +12,9 @@ module.exports = {
 =======
 >>>>>>> [chore] hook up request handlers to client
     request.photoAnalysisReq(imageURL1);
+=======
+    req.photoAnalysisReq(imageURL1);
+>>>>>>> [fix] fixed errors
     //return compiled
   }
 };
