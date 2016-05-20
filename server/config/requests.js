@@ -25,7 +25,7 @@ module.exports = {
     request('http://food2fork.com/api/search?key=' + FoodToForkAPI + '&q=' + reqInfo, function (err, response, body) {
       if (err) throw err;
       console.log(response.body);
-    });    
-  } 
+    });
+  }
 
 }
