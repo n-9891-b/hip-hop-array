@@ -1,3 +1,5 @@
+'use strict';
+
 var assert = require('chai').assert;
 describe('Array', function() {
   describe('#indexOf()', function () {

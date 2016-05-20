@@ -12,6 +12,9 @@
     "watson-developer-cloud": "^1.8.0"
   },
   "devDependencies": {
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-mocha": "^1.0.1",
     "mocha": "^2.4.5"
   },
   "scripts": {
