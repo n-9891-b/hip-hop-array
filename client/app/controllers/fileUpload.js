@@ -6,7 +6,7 @@ angular.module('app.fileUpload', ['ngFileUpload'])
   var sendUrl = function(url) {
     return $http({
       method: 'POST', 
-      url: '/api/photo',
+      url: '/api/photo/recipes',
       data: {imageUrl: url}
     })
   };

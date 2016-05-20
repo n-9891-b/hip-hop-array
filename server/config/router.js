@@ -1,8 +1,8 @@
 var bodyParser = require('body-parser');
-var requestHandler = ('./request-handler.js');
+var requestHandler = require('./request-handlers.js');
 
 module.exports = function (app) {
-
-app.post('/recipes', requestHandler.photoHandler);
-
+  app.post('/recipes', requestHandler.photoHandler);
 };
+
+
