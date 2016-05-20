@@ -1,35 +1,31 @@
 var request = require('request');
+var requestHandler = require('./request-handlers');
 var watson = require('watson-developer-cloud');
+var Promise = require('bluebird');
 var AlchemyAPI = require('alchemy-api');
 var alchemy = new AlchemyAPI('bfa7f6b236ba90e1b2cadd86f5b6f8203f6123c9');
 var FoodToForkAPI = '6c217911dc3551a37654ed22d97dabdb';
 
 module.exports = {
   photoAnalysisReq: function (image, res) {
-      // var imageKeywords = [];
-      // for (key in object) {                                                 //image right now is going to be a URL in form {req.body.image: url || imageEventually}
-      alchemy.imageKeywords(image, {}, function (err, response) { //right now this is image = url
-      if (err) throw err;
-      // See http://www.alchemyapi.com/api/image-tagging/urls.html for format of returned object
-      var imageKeywords = response.imageKeywords; //JSON OBJECT
-
-      //compiled.push(imageKeyword);
-      var foodType = imageKeywords[0].text;
-        // console.log(foodType);
-        module.exports.recipesReq(foodType, res);
-    // }
-
-
-      // res.send(imageKeywords);
-      // recipesReq(imageKeywords);
+      return new Promise (function (resolve, reject) {
+        alchemy.imageKeywords(image, {}, function (err, response) {
+        if (err) throw err;
+        var imageKeywords = response.imageKeywords;
+        var foodType = imageKeywords[0].text;
+        resolve(foodType);
+        });
+      })
+    .then(function(foodType) {
+      res.send(foodType);
     });
   },
 
-  recipesReq: function (reqInfo, res) { //makes the recipe call
-    request('http://food2fork.com/api/search?key=' + FoodToForkAPI + '&q=' + reqInfo, function (err, response, body) {
+  recipesReq: function (reqInfo, res) {
+    var ingredientJoin = reqInfo.join(', ');
+    request('http://food2fork.com/api/search?key=' + FoodToForkAPI + '&q=' + ingredientJoin, function (err, response, body) {
       if (err) throw err;
       res.send(body);
-      // console.log(response);
     });
   }
 
