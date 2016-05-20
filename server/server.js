@@ -6,7 +6,7 @@ var port = process.env.PORT || 4568;
 var app = express();
 
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/../client/'));
+// app.use(express.static(__dirname + '/../client/'));
 
 app.use(express.static(__dirname + '/../client'));
 
