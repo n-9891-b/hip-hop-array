@@ -3,7 +3,7 @@
 angular.module('app', [
   'app.services',
   'app.fileUpload',
-  'app.recipes',
+  'app.ingredients',
   'ngRoute'
 ])
 .config(function($routeProvider) {
@@ -12,9 +12,9 @@ angular.module('app', [
     templateUrl: 'app/views/fileUpload.html', 
     controller: 'fileUploadCtrl'
   })
-  .when('/recipes', {
-    templateUrl: 'app/views/recipes.html',
-    controller: 'recipesCtrl'
+  .when('/ingredients', {
+    templateUrl: 'app/views/ingredients.html',
+    controller: 'ingredientsCtrl'
   })
   .otherwise({
     redirectTo: '/'
