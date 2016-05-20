@@ -2,24 +2,12 @@
 
 angular.module('app.fileUpload', ['ngFileUpload'])
 
-.factory('imageUrl', function($http) {
-  var sendUrl = function(url) {
-    return $http({
-      method: 'POST', 
-      url: '/api/photo/recipes',
-      data: {imageUrl: url}
-    })
-  };
-
-  return {
-    sendUrl: sendUrl
-  };
-})
-
-.controller('fileUploadCtrl', function($scope, imageUrl, Upload, $timeout) {
+.controller('fileUploadCtrl', function($scope, imageUrl, $location, Upload, $timeout, recipesFactory) {
   $scope.submitUrl = function(url) {
-    console.log(url);
-    imageUrl.sendUrl(url);
+    imageUrl.sendUrl(url, function(data) {
+      recipesFactory.setRecipes(data);
+      $location.path('/recipes');
+    });
   };
 
   $scope.uploadFiles = function(files, errFiles) {
@@ -43,5 +31,10 @@ angular.module('app.fileUpload', ['ngFileUpload'])
         file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
       });
     });
+  };
+
+  $scope.displayRecipes = function(recipes) {
+    $scope.recipes = recipes.recipes;
+    $location.path('/recipes');
   }
 });
