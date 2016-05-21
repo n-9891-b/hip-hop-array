@@ -3,6 +3,8 @@
 angular.module('app.ingredients', [])
 
 .controller('ingredientsCtrl', function($scope, ingredientsFactory) {
+  $scope.ingredientsStorage = [];
+
   $scope.ingredient = ingredientsFactory.getIngredient();
   console.log($scope.ingredient);
 
