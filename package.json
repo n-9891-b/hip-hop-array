@@ -10,6 +10,7 @@
     "grunt": "^1.0.1",
     "init": "^0.1.2",
     "install": "^0.7.3",
+    "multer": "^1.1.0",
     "watson-developer-cloud": "^1.8.0"
   },
   "devDependencies": {

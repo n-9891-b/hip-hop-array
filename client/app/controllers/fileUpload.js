@@ -11,7 +11,7 @@ angular.module('app.fileUpload', ['ngFileUpload'])
   };
 
   $scope.submitImages = function () {
-      $scope.uploadFiles($scope.files);
+    $scope.uploadFiles($scope.files);
   };
 
   $scope.uploadFiles = function(files) {  //, errFiles
