@@ -4,10 +4,13 @@ var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
 
 module.exports = function (app) {
+
+  const uploadMiddleware = upload.array('photos');
   app.post('/recipes', requestHandler.photoHandler);
-  app.post('/ingredients', upload.array('photos', 12), function (req, res) {
-    console.log(req);
+  app.post('/ingredients', uploadMiddleware, function(req, res, next) {
+    console.log(req.files);
   });
+    
 };
 
 
