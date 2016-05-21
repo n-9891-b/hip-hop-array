@@ -20,7 +20,8 @@ angular.module('app.fileUpload', ['ngFileUpload'])
       console.log(files[0].constructor);
       Upload.upload({
         url: '/api/photo/ingredients',
-        data: {files: files}
+        arrayKey: '',
+        data: {photos: files}
       });
     };
   }
