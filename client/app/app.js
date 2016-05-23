@@ -4,6 +4,7 @@ angular.module('app', [
   'app.services',
   'app.fileUpload',
   'app.ingredients',
+  'app.scroll',
   'ngRoute'
 ])
 .config(function($routeProvider) {
