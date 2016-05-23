@@ -11,7 +11,8 @@
     "grunt": "^1.0.1",
     "init": "^0.1.2",
     "install": "^0.7.3",
-    "multer": "^1.1.0"
+    "multer": "^1.1.0",
+    "request": "^2.72.0"
   },
   "devDependencies": {
     "karma": "^0.13.22",

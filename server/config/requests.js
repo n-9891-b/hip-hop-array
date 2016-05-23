@@ -1,6 +1,5 @@
 var request = require('request');
 var requestHandler = require('./request-handlers');
-var watson = require('watson-developer-cloud');
 var Promise = require('bluebird');
 var AlchemyAPI = require('alchemy-api');
 var alchemy = new AlchemyAPI('82ef262b9654e3ac400ff00238a1cc588c309e9c');
