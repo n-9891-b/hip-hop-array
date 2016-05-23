@@ -1,28 +1,48 @@
-<a name="top"></a>
-<div class="banner-section mdl-typography--text-center">
+<div class="banner-section mdl-typography--text-center" ng-class="flag===true ? 'banner-extend' : ''">
   <div class="logo-font slogan">show us 3 ingredients</div>
   <div class="logo-font sub-slogan">and we'll do the rest.</div>
 
-  <form action="#" name="urlInputForm" ng-submit="submitUrl(url)">
+  <!-- <form name="urlInputForm" ng-submit="submitUrl(url)">
     <div class="mdl-textfield mdl-js-textfield">
       <input class="mdl-textfield__input" type="text" id="sample1" placeholder="enter url here" ng-model="url"/>
       <label class="mdl-textfield__label" for="sample1"></label>
     </div>
     <br/>
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">Submit</button>
+  </form> -->
+
+   <form name="form" ng-submit="submitImages()">
+    <div class="mdl-grid" id="thumbnailContainer">
+      <div class="mdl-cell mdl-cell--4-col" ng-repeat="image in files">
+        <img ngf-thumbnail="image" style="width: 50%; height: 50%"/>
+        <img ng-click="removeImage(image)" src="../../assets/x_delete_icon.png" style="width: 20%; height: 20%"/>
+      </div>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield">
+      <div class="mdl-textfield__input" ngf-select ngf-drop ng-model="files" ngf-multiple="true" ngf-capture="capture" ng-change="changeFlag()">
+        Select or Drop Files
+      </div>
+    </div>
+    <br/>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">Submit</button>
   </form>
 
-  <div>
+
+  <!-- <div>
     <h4>Upload on file select!!!</h4>
     <form name="form">
-      Select file(s)
+      <div class="mdl-grid" id="thumbnailContainer">
+        <div class="mdl-cell mdl-cell--4-col" ng-repeat="image in files">
+          <img ngf-thumbnail="image" style="width: 50%; height: 50%">
+        </div>
+      </div>
       <br>
       <button class="button" ngf-select ng-model="files" ngf-multiple="true">Select</button>
-      <br>
-      Drop files: <div style='width:100px;height:100px;border-style:dotted' ngf-drop ng-model="files" class="drop-box">Drop</div>
-      <button type="submit" ng-click="submitImages()">submit</button>
+      <!-- <br>
+      Drop files: <div style='width:100px;height:100px;border-style:dotted' ngf-drop ng-model="files" class="drop-box">Drop</div> -->
+     <!--  <button type="submit" ng-click="submitImages()">submit</button>
     </form>
-  </div>
+  </div> -->
 
   <a href="#screens">
     <button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
@@ -37,7 +57,7 @@
   <div class="android-card-container mdl-grid">
     <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
       <div class="mdl-card__media">
-        <img src="images/more-from-1.png">
+        <img src="">
       </div>
       <div class="mdl-card__title">
          <h4 class="mdl-card__title-text">Adam Behrens</h4>
@@ -49,7 +69,7 @@
 
     <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
       <div class="mdl-card__media">
-        <img src="images/more-from-4.png">
+        <img src="">
       </div>
       <div class="mdl-card__title">
          <h4 class="mdl-card__title-text">Nate Blain</h4>
@@ -61,10 +81,10 @@
 
     <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
       <div class="mdl-card__media">
-        <img src="images/more-from-2.png">
+        <img src="">
       </div>
       <div class="mdl-card__title">
-         <h4 class="mdl-card__title-text">Chee Kim</h4>
+         <h4 class="mdl-card__title-text">Cheewoon Kim</h4>
       </div>
       <div class="mdl-card__supporting-text">
         <span class="mdl-typography--font-light mdl-typography--subhead">A clean, simple, customisable home screen that comes with the power of </span>
@@ -73,7 +93,7 @@
 
     <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
       <div class="mdl-card__media">
-        <img src="images/more-from-3.png">
+        <img src="">
       </div>
       <div class="mdl-card__title">
          <h4 class="mdl-card__title-text">Gina Zhou</h4>

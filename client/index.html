@@ -24,9 +24,8 @@
     }
     </style>
   </head>
-  <body>
+  <body ng-controller="scrollController">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-
       <div class="header mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row">
           <h3 id="header_title">Hip Hop Array</h3>
@@ -59,10 +58,9 @@
           <a class="mdl-navigation__link" href="">Wear</a>
         </nav>
       </div>
-
-      <div class="mdl-layout__content">
-
-        <div ng-view></div>
+      
+        <div class="mdl-layout__content">
+        <div ng-view id="top"></div>
 
         <footer class="android-footer mdl-mega-footer">
           <div class="mdl-mega-footer--top-section">
@@ -74,7 +72,7 @@
               <button class="mdl-mega-footer--social-btn"></button>
             </div>
             <div class="mdl-mega-footer--right-section">
-              <a class="mdl-typography--font-light" href="#top">
+              <a class="mdl-typography--font-light" ng-click="scrollToTop('top')">
                 Back to Top
                 <i class="material-icons">expand_less</i>
               </a>
@@ -117,6 +115,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
     <script src="bower_components/ng-file-upload/ng-file-upload-shim.min.js"></script>
     <script src="bower_components/ng-file-upload-shim/ng-file-upload.min.js"></script>
+    <script src="app/controllers/scrollController.js"></script>
     <script src="app/controllers/fileUpload.js"></script>
     <script src="app/controllers/ingredients.js"></script>
     <script src="app/services/services.js"></script>

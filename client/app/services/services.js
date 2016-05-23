@@ -3,12 +3,25 @@
 angular.module('app.services', [])
 
 .factory('imageUrlFactory', function($http) {
+  // function sendUrl(url, cb) {
+  //   return $http({
+  //     method: 'POST', 
+  //     url: '/api/photo/recipes',
+  //     data: {imageUrl: url}
+  //   })
+  //   .then(function success(response) {
+  //     cb(response.data);
+  //   })
+  //   .catch(function() {
+  //     console.error('error during ingredient API fetch');
+  //   })
+  // }
 
-  function sendUrl(url, cb) {
+  function sendFiles(imagesArr, cb){
     return $http({
-      method: 'POST', 
+      method: 'POST',
       url: '/api/photo/recipes',
-      data: {imageUrl: url}
+      data: {imageUrl: imagesArr}
     })
     .then(function success(response) {
       cb(response.data);
@@ -19,7 +32,8 @@ angular.module('app.services', [])
   }
 
   return {
-    sendUrl: sendUrl
+    // sendUrl: sendUrl,
+    sendFiles: sendFiles
   };
 })
 

@@ -157,7 +157,15 @@ a img{
 
 .banner-section {
   position: relative;
-  height: 700px;
+  height: 500px;
+  width: auto;
+  background-color: #f3f3f3;
+  background-size: cover;
+}
+
+.banner-extend {
+  position: relative;
+  height: 600px;
   width: auto;
   background-color: #f3f3f3;
   background-size: cover;
