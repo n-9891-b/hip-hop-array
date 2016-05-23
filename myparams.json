@@ -1,7 +1,12 @@
 {
   "classifier_ids":
-    ["vegetable_1541719031", 
-    "vegetable_384605986",
-    "vegetable_792821067",
+    ["vegetables_722981425",
+    "vegetables_934739763",
+    "vegetables_2113438709",
+    "vegetables_1816868772",
+    "fruit_733528613",
+    "fruit_1834403011",
+    "fish_88159451",
+    "meat_1560822276",
     "default"]
 }
