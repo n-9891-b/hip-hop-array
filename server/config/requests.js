@@ -8,6 +8,8 @@ var FoodToForkAPI = '6c217911dc3551a37654ed22d97dabdb';
 
 module.exports = {
   photoAnalysisReq: function (image, res) {
+      // images.forEach(alchemy(image))
+      
       return new Promise (function (resolve, reject) {
         alchemy.imageKeywords(image, {}, function (err, response) {
         if (err) throw err;
