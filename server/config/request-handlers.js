@@ -3,10 +3,12 @@ var request = require('./requests.js');
 
 module.exports = {
   photoHandler: function (req, res) {
-    var imageURL1 = req.body.imageUrl;
-    console.log(imageURL1);
-    request.photoAnalysisReq(imageURL1, res);
+    Promise.all(req.files.map(function(item) {
+      return request.photoAnalysisReq('/../../' + item.path);
+    }))
+    .then(function(resultsArray) {
+      res.send(resultsArray);
+    });
   }
 };
-
 

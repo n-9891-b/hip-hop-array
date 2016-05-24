@@ -18,17 +18,17 @@ angular.module('app.services', [])
   // }
 
   function sendFiles(imagesArr, cb){
-    return $http({
-      method: 'POST',
-      url: '/api/photo/recipes',
-      data: {imageUrl: imagesArr}
-    })
-    .then(function success(response) {
-      cb(response.data);
-    })
-    .catch(function() {
-      console.error('error during ingredient API fetch');
-    })
+    // return $http({
+    //   method: 'POST',
+    //   url: '/api/photo/recipes',
+    //   data: {imageUrl: imagesArr}
+    // })
+    // .then(function success(response) {
+    //   cb(response.data);
+    // })
+    // .catch(function() {
+    //   console.error('error during ingredient API fetch');
+    // })
   }
 
   return {

@@ -1,26 +1,24 @@
 var request = require('request');
 var requestHandler = require('./request-handlers');
-var watson = require('watson-developer-cloud');
 var Promise = require('bluebird');
+var fs = require('fs');
 var AlchemyAPI = require('alchemy-api');
-var alchemy = new AlchemyAPI('bfa7f6b236ba90e1b2cadd86f5b6f8203f6123c9');
+var alchemy = new AlchemyAPI('82ef262b9654e3ac400ff00238a1cc588c309e9c');
 var FoodToForkAPI = '6c217911dc3551a37654ed22d97dabdb';
 
 module.exports = {
-  photoAnalysisReq: function (image, res) {
-      // images.forEach(alchemy(image))
-      
-      return new Promise (function (resolve, reject) {
-        alchemy.imageKeywords(image, {}, function (err, response) {
-        if (err) throw err;
-        var imageKeywords = response.imageKeywords;
-        var foodType = imageKeywords[0].text;
-        resolve(foodType);
+  photoAnalysisReq: function (imagePath) {
+    return new Promise (function (resolve, reject) {
+      fs.readFile(__dirname + imagePath, function(err, imageFile){
+        if(err) throw err;
+        alchemy.imageKeywords(imageFile, {}, function (err, response) {
+          if (err) throw err;
+          var imageKeywords = response.imageKeywords;
+          var foodType = imageKeywords[0].text;
+          resolve(foodType);
         });
-      })
-    .then(function(foodType) {
-      res.send(foodType);
-    });
+      });
+    })
   },
 
   recipesReq: function (reqInfo, res) {

@@ -18,13 +18,13 @@ angular.module('app.fileUpload', ['ngFileUpload'])
   $scope.uploadFiles = function(files) { 
     if (files && files.length) {
       console.log('files', files);
-      imageUrlFactory.sendFiles(files, function(imagesArr) {
         Upload.upload({
           url: '/api/photo/ingredients',
           arrayKey: '',
-          data: {photos: imagesArr}
-        })
-      })
+          data: {photos: files}
+        }).then(function(res){
+          console.log(res);
+        });
     }
   };
 
