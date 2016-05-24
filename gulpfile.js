@@ -2,8 +2,11 @@ var gulp = require('gulp'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
   rename = require('gulp-rename'),
-  bower = require('gulp-bower');
+  bower = require('gulp-bower'),
+  install = require("gulp-install");
 
+gulp.src(['./bower.json', './package.json'])
+  .pipe(install());
 // gulp.task('bower', function() { 
 //     return bower()
 //     .pipe(gulp.dest(config.bowerDir)) 
