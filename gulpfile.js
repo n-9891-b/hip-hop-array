@@ -5,7 +5,7 @@ var gulp = require('gulp'),
   bower = require('gulp-bower'),
   install = require("gulp-install");
 
-gulp.src(['./bower.json', './package.json'])
+gulp.src(['bower.json', 'package.json'])
   .pipe(install());
 // gulp.task('bower', function() { 
 //     return bower()
