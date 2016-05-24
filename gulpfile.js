@@ -5,14 +5,14 @@ var gulp = require('gulp'),
   bower = require('gulp-bower'),
   install = require("gulp-install");
 
-gulp.task('bower-build', function() {
-  gulp.src(['bower.json', 'package.json'])
-  .pipe(install());
-// gulp.task('bower', function() { 
-//     return bower()
-//     .pipe(gulp.dest(config.bowerDir)) 
-// })
-});
+// gulp.task('bower-build', function() {
+//   gulp.src(['bower.json', 'package.json'])
+//   .pipe(install());
+// // gulp.task('bower', function() { 
+// //     return bower()
+// //     .pipe(gulp.dest(config.bowerDir)) 
+// // })
+// });
 
 
 gulp.task('client-scripts', function() {
@@ -31,4 +31,4 @@ gulp.task('server-scripts', function() {
 });
 
 // Default Task
-gulp.task('default', ['client-scripts', 'server-scripts', 'bower-build']);
+gulp.task('default', ['client-scripts', 'server-scripts']);
