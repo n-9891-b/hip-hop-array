@@ -5,11 +5,10 @@ var upload = multer({dest: 'uploads/'});
 
 module.exports = function (app) {
 
-  const uploadMiddleware = upload.array('photos');
+  var uploadMiddleware = upload.array('photos');
+  
   app.post('/recipes', requestHandler.photoHandler);
-  app.post('/ingredients', uploadMiddleware, function(req, res, next) {
-    console.log(req.files);
-  });
+  app.post('/ingredients', uploadMiddleware, requestHandler.photoHandler);
     
 };
 

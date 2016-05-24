@@ -1,12 +1,16 @@
 var bodyParser = require('body-parser');
 var request = require('./requests.js');
+var fs = require('fs');
 
 module.exports = {
   photoHandler: function (req, res) {
-    var imageURL1 = req.body.imageUrl;
-    console.log(imageURL1);
-    request.photoAnalysisReq(imageURL1, res);
+    req.files.forEach(function (file) {
+      var image = file.path;
+      var imagePath = '/../../' + image;
+      fs.readFile(__dirname + imagePath, function(err, imageFile){
+        request.photoAnalysisReq(imageFile, res);
+      });
+    });
   }
 };
-
 
