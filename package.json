@@ -2,7 +2,10 @@
   "name": "hip-hop-array",
   "version": "1.0.0",
   "description": ">MKS Greenfield Project",
-  "main": "gruntfile.js",
+  "engines": {
+    "node": "v6.0.0"
+  },
+  "main": "gulpfile.js",
   "dependencies": {
     "alchemy-api": "^1.3.2",
     "body-parser": "^1.15.1",
@@ -15,6 +18,11 @@
     "request": "^2.72.0"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-install": "^0.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
     "karma-mocha": "^1.0.1",
@@ -23,7 +31,8 @@
   },
   "scripts": {
     "test": "mocha",
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "postinstall": "gulp default"
   },
   "repository": {
     "type": "git",
