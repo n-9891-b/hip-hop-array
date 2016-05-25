@@ -8,7 +8,7 @@ angular.module('app', [
   'app.index',
   'ngRoute'
 ])
-.config(function($routeProvider) {
+.config(function($routeProvider, $locationProvider) {
   $routeProvider
   .when('/', {
     templateUrl: 'app/views/fileUpload.html', 
@@ -34,4 +34,6 @@ angular.module('app', [
   .otherwise({
     redirectTo: '/'
   })
+
+  $locationProvider.html5Mode(true);
 });
