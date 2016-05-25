@@ -16,7 +16,16 @@ angular.module('app', [
   })
   .when('/recipes', {
     templateUrl: 'app/views/recipes.html',
-    controller: 'recipesCtrl'
+    controller: 'recipesCtrl',
+    resolve: {
+      app: function($q, $timeout) {
+        var defer = $q.defer();
+        $timeout(function() {
+          defer.resolve();
+        }, 10000);
+        return defer.promise;
+      }
+    }
   })
   .when('/myrecipes', {
     templateUrl: 'app/views/myRecipes.html',

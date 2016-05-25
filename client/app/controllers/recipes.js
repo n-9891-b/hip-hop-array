@@ -3,11 +3,10 @@
 angular.module('app.recipes', [])
 
 .controller('recipesCtrl', function($scope, $location, recipesFactory) {
-  // $scope.recipes = recipesFactory.getRecipes();
-  // console.log($scope.recipes);
+  $scope.totalRecipes = recipesFactory.totalRecipes;
+  
   $scope.addToList = function(str){
     recipesFactory.myRecipesStorage.push(str);
-    // myRecipesFactory.setMyRecipes(recipesFactory.myRecipesStorage);
     console.log("lol:", recipesFactory.myRecipesStorage);
   };
 
