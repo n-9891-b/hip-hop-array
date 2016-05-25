@@ -2,7 +2,7 @@
 
 angular.module('app.fileUpload', ['ngFileUpload'])
 
-.controller('fileUploadCtrl', function($scope, imageUrlFactory, $location, Upload, ingredientsFactory) {
+.controller('fileUploadCtrl', function($scope, imageUrlFactory, $location, Upload) {
   // $scope.submitUrl = function(url) {
   //   imageUrlFactory.sendUrl(url, function(data) {
   //     ingredientsFactory.setIngredient(data);
@@ -13,6 +13,7 @@ angular.module('app.fileUpload', ['ngFileUpload'])
 
   $scope.submitImages = function () {
     $scope.uploadFiles($scope.files);
+    $location.path('/recipes');
   };
 
   $scope.uploadFiles = function(files) { 
@@ -23,7 +24,10 @@ angular.module('app.fileUpload', ['ngFileUpload'])
           arrayKey: '',
           data: {photos: files}
         }).then(function(res){
-          console.log(res);
+          var totalRecipes = res.data.recipes;
+          $scope.recipes = totalRecipes.slice(0, 12);
+
+          console.log('recipes', $scope.recipes);
         });
     }
   };

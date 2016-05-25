@@ -1,0 +1,12 @@
+<div class="recipes-section mdl-typography--text-center">
+  <div class="logo-font recipes-slogan">My Recipes</div>
+  <div class="logo-font sub-slogan">list of recipes</div>
+  <button ng-click="printMyRec()">Button</button>
+
+  <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--3-col" ng-repeat="recipe in myRecipesStorage">
+        {{recipe}}
+        <img src="../../assets/x_delete_icon.png"/>
+      </div>
+  </div>
+</div>
