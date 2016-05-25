@@ -1,12 +1,15 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var requestHandler = require('./config/request-handlers.js');
+var deleteCron = require('../workers/delete-cron.js');
 
 var port = process.env.PORT || 4568;
 
 var app = express();
 
 require('./config/config.js')(app, express);
+
+deleteCron.fileWatcher();
 
 app.use(bodyParser.json());
 // app.use(express.static(__dirname + '/../client/'));
