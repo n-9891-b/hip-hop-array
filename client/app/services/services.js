@@ -37,19 +37,10 @@ angular.module('app.services', [])
   };
 })
 
-.factory('ingredientsFactory', function() {
-  var ingredient = '';
-
-  function setIngredient(ingredientResponse) {
-    ingredient = ingredientResponse;
-  }
-
-  function getIngredient() {
-    return ingredient;
-  }
+.factory('recipesFactory', function() {
+  var myRecipesStorage = [];
 
   return {
-    getIngredient: getIngredient,
-    setIngredient: setIngredient
-  }
-})
+    myRecipesStorage: myRecipesStorage
+  };
+});

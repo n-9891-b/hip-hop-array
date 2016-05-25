@@ -24,11 +24,11 @@
     }
     </style>
   </head>
-  <body ng-controller="scrollController">
+  <body ng-controller="indexCtrl">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <div class="header mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row">
-          <h3 id="header_title">Hip Hop Array</h3>
+          <h3 id="header_title" ng-click="goToHomepage()">Hip Hop Array</h3>
           <!-- Add spacer, to align navigation to the right in desktop -->
           <div class="android-header-spacer mdl-layout-spacer"></div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
@@ -42,7 +42,6 @@
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Phones</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Tablets</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Wear</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">TV</a>
             </nav>
           </div>
         </div>
@@ -50,7 +49,7 @@
 
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">
-          <h3>Hip Hop Array</h3>
+          <h3 id="header_title" ng-click="goToHomepage()">Hip Hop Array</h3>
         </span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="">Phones</a>
@@ -115,9 +114,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
     <script src="bower_components/ng-file-upload/ng-file-upload-shim.min.js"></script>
     <script src="bower_components/ng-file-upload-shim/ng-file-upload.min.js"></script>
-    <script src="app/controllers/scrollController.js"></script>
+    <script src="app/controllers/index.js"></script>
     <script src="app/controllers/fileUpload.js"></script>
-    <script src="app/controllers/ingredients.js"></script>
+    <script src="app/controllers/recipes.js"></script>
+    <script src="app/controllers/myRecipes.js"></script>
     <script src="app/services/services.js"></script>
     <script src="app/app.js"></script>
   </body>

@@ -7,7 +7,7 @@ module.exports = {
       return request.photoAnalysisReq('/../../' + item.path);
     }))
     .then(function(resultsArray) {
-      res.send(resultsArray);
+      request.recipesReq(resultsArray, res);
     });
   }
 };
