@@ -4,17 +4,8 @@
   <!-- <button ng-click="printRec()"></button> -->
   <span ng-click="goMyRecipes()">Get My Recipes!!</span>
   <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--3-col" ng-click="addToList(recipe)" ng-repeat="recipe in recipes">
+      <div class="mdl-cell mdl-cell--3-col" ng-click="addToList(recipe)" ng-repeat="recipe in totalRecipes">
         <img src="{{recipe.image_url}}"/>
       </div>
-      <!-- <div class="mdl-cell mdl-cell--3-col" ng-click="addToList('recipe2')">
-        <img src="../../assets/x_delete_icon.png"/>
-      </div>
-      <div class="mdl-cell mdl-cell--3-col" ng-click="addToList('recipe3')">
-        <img src="../../assets/x_delete_icon.png"/>
-      </div>
-      <div class="mdl-cell mdl-cell--3-col" ng-click="addToList('recipe4')">
-        <img src="../../assets/x_delete_icon.png"/>
-      </div> -->
   </div>
 </div>
