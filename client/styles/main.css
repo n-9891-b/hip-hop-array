@@ -116,7 +116,7 @@ a img{
 .recipes-section {
   position: relative;
   overflow: hidden;
-  height: 1%;
+  height: 800px;
   width: auto;
   background-color: #f3f3f3;
   background-size: cover;
@@ -136,7 +136,7 @@ a img{
 
 .slogan {
   font-size: 60px;
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 .sub-slogan {
