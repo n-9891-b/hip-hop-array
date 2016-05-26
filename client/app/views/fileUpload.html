@@ -2,15 +2,6 @@
   <div class="logo-font slogan">show us 3 ingredients</div>
   <div class="logo-font sub-slogan">and we'll do the rest.</div>
 
-  <!-- <form name="urlInputForm" ng-submit="submitUrl(url)">
-    <div class="mdl-textfield mdl-js-textfield">
-      <input class="mdl-textfield__input" type="text" id="sample1" placeholder="enter url here" ng-model="url"/>
-      <label class="mdl-textfield__label" for="sample1"></label>
-    </div>
-    <br/>
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">Submit</button>
-  </form> -->
-
    <form name="form" ng-submit="submitImages()">
     <div class="mdl-grid" id="thumbnailContainer">
       <div class="mdl-cell mdl-cell--4-col" ng-repeat="image in files">
@@ -26,23 +17,6 @@
     <br/>
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">Submit</button>
   </form>
-
-
-  <!-- <div>
-    <h4>Upload on file select!!!</h4>
-    <form name="form">
-      <div class="mdl-grid" id="thumbnailContainer">
-        <div class="mdl-cell mdl-cell--4-col" ng-repeat="image in files">
-          <img ngf-thumbnail="image" style="width: 50%; height: 50%">
-        </div>
-      </div>
-      <br>
-      <button class="button" ngf-select ng-model="files" ngf-multiple="true">Select</button>
-      <!-- <br>
-      Drop files: <div style='width:100px;height:100px;border-style:dotted' ngf-drop ng-model="files" class="drop-box">Drop</div> -->
-     <!--  <button type="submit" ng-click="submitImages()">submit</button>
-    </form>
-  </div> -->
 </div>
 
 <div class="android-customized-section">
