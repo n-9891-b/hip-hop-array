@@ -21,9 +21,8 @@ angular.module('app.fileUpload', ['ngFileUpload'])
     if($scope.files) {
       $location.path('/loading');
       $scope.uploadFiles($scope.files);
-      $scope.error = "";
     }else {
-      $scope.error = "photo required";
+      $scope.error = "*IMAGE REQUIRED";
     }
   };
 
@@ -53,11 +52,15 @@ angular.module('app.fileUpload', ['ngFileUpload'])
 
     if ($scope.files.length === 0) {
       $scope.flag = false;
+      $scope.error = "IMAGE REQUIRED";
     }
     console.log($scope.files);
   };
 
   $scope.changeFlag = function() {
     $scope.flag = true;
+    if($scope.flag) {
+      $scope.error = " ";
+    }
   };
 });
