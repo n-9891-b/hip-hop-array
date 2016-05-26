@@ -4,9 +4,4 @@ angular.module('app.index', [])
     $location.hash(id);
     $anchorScroll();
   };
-
-  $scope.goToHomepage = function() {
-    console.log('hi there')
-    $location.path('/');
-  };
 });
