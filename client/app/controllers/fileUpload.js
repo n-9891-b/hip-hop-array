@@ -3,32 +3,20 @@
 angular.module('app.fileUpload', ['ngFileUpload'])
 
 .controller('fileUploadCtrl', function($scope, $location, Upload, recipesFactory) {
-  // $scope.submitUrl = function(url) {
-  //   imageUrlFactory.sendUrl(url, function(data) {
-  //     ingredientsFactory.setIngredient(data);
-  //     $location.path('/ingredients');
-  //   });
-  // };
   $scope.flag = false;
+  $scope.files = [];
 
   $scope.submitImages = function () {
-    // if (!$scope.files) {
-    //   $location.path('/error');
-    // } else {
-    //   $location.path('/loading');
-    //   $scope.uploadFiles($scope.files);
-    // }
-    if($scope.files) {
+    if($scope.files.length > 0) {
       $location.path('/loading');
       $scope.uploadFiles($scope.files);
-    }else {
+    } else {
       $scope.error = "*IMAGE REQUIRED";
     }
   };
 
   $scope.uploadFiles = function(files) { 
     if (files && files.length) {
-      console.log('files', files);
       Upload.upload({
         url: '/api/photo/ingredients',
         arrayKey: '',
@@ -52,9 +40,8 @@ angular.module('app.fileUpload', ['ngFileUpload'])
 
     if ($scope.files.length === 0) {
       $scope.flag = false;
-      $scope.error = "IMAGE REQUIRED";
+      $scope.error = "*IMAGE REQUIRED";
     }
-    console.log($scope.files);
   };
 
   $scope.changeFlag = function() {
