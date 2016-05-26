@@ -12,11 +12,18 @@ angular.module('app.fileUpload', ['ngFileUpload'])
   $scope.flag = false;
 
   $scope.submitImages = function () {
-    if (!$scope.files) {
-      $location.path('/error');
-    } else {
+    // if (!$scope.files) {
+    //   $location.path('/error');
+    // } else {
+    //   $location.path('/loading');
+    //   $scope.uploadFiles($scope.files);
+    // }
+    if($scope.files) {
       $location.path('/loading');
       $scope.uploadFiles($scope.files);
+      $scope.error = "";
+    }else {
+      $scope.error = "photo required";
     }
   };
 
