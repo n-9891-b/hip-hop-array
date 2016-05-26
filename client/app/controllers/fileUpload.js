@@ -12,23 +12,32 @@ angular.module('app.fileUpload', ['ngFileUpload'])
   $scope.flag = false;
 
   $scope.submitImages = function () {
-    $scope.uploadFiles($scope.files);
-    $location.path('/recipes');
+    if (!$scope.files) {
+      $location.path('/error');
+    } else {
+      $location.path('/loading');
+      $scope.uploadFiles($scope.files);
+    }
   };
 
   $scope.uploadFiles = function(files) { 
     if (files && files.length) {
       console.log('files', files);
-        Upload.upload({
-          url: '/api/photo/ingredients',
-          arrayKey: '',
-          data: {photos: files}
-        }).then(function(res){
-          var totalRecipes = res.data.recipes;
-          $scope.recipes = totalRecipes.slice(0, 12);
-          recipesFactory.totalRecipes = $scope.recipes;
-          console.log('recipes', $scope.recipes);
-        });
+      Upload.upload({
+        url: '/api/photo/ingredients',
+        arrayKey: '',
+        data: {photos: files}
+      }).then(function(res){
+        var totalRecipes = res.data.recipes;
+        $scope.recipes = totalRecipes.slice(0, 12);
+        recipesFactory.totalRecipes = $scope.recipes;
+
+        if (recipesFactory.totalRecipes.length > 0) {
+          $location.path('/recipes');
+        } else {
+          $location.path('/error');
+        }
+      });
     }
   };
 
