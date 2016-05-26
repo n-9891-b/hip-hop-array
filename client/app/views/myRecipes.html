@@ -1,12 +1,9 @@
 <div class="recipes-section mdl-typography--text-center">
   <div class="logo-font recipes-slogan">My Recipes</div>
-  <div class="logo-font sub-slogan">list of recipes</div>
-  <button ng-click="printMyRec()">Button</button>
-
-  <ul class="mdl-list">
-    <li ng-repeat="recipe in myRecipesStorage">
-      <h2>{{recipe.title}}</h2><br/>
-      <a href="{{recipe.source_url}}" target="_blank"><h3>click for recipe</h3></a>
-    </li>
-  </ul>
+  <br/><br/>  
+  <div class="myRecipes_cell" ng-repeat="recipe in myRecipesStorage">
+    <img src="{{recipe.image_url}}" style="width: 300px; height: 175px;"/><br/><br/>
+    <span class="myRecipes_title">{{recipe.title}}</span><br/>
+    <a class="myRecipes_url" href="{{recipe.source_url}}" target="_blank">click for recipe</a>
+  </div>
 </div>

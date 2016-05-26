@@ -6,7 +6,7 @@
     <div class="mdl-grid" id="thumbnailContainer">
       <div class="mdl-cell mdl-cell--4-col" ng-repeat="image in files">
         <img ngf-thumbnail="image" style="width: 50%; height: 50%"/>
-        <img ng-click="removeImage(image)" src="../../assets/x_delete_icon.png" style="width: 20%; height: 20%"/>
+        <img id="delete_icon" ng-click="removeImage(image)" src="../../assets/x_delete_icon.png" style="width: 10%; height: 10%"/>
       </div>
     </div>
     <div class="mdl-textfield mdl-js-textfield">
