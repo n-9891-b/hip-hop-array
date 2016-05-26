@@ -11,8 +11,4 @@ angular.module('app.recipes', [])
     }
     console.log("lol:", recipesFactory.myRecipesStorage);
   };
-
-  $scope.goMyRecipes = function() {
-    $location.path('/myrecipes');
-  };
 });
