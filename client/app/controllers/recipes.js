@@ -9,6 +9,5 @@ angular.module('app.recipes', [])
     if (recipesFactory.myRecipesStorage.indexOf(item) === -1) {
       recipesFactory.myRecipesStorage.push(item);
     }
-    console.log("lol:", recipesFactory.myRecipesStorage);
   };
 });

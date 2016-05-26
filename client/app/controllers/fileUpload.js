@@ -7,9 +7,11 @@ angular.module('app.fileUpload', ['ngFileUpload'])
   $scope.files = [];
 
   $scope.submitImages = function () {
-    if($scope.files.length > 0) {
+    if($scope.files.length > 0 && $scope.files.length < 4) {
       $location.path('/loading');
       $scope.uploadFiles($scope.files);
+    } else if ($scope.files.length > 3) {
+      $scope.error = "*MAXIMUM: 3 IMAGES";
     } else {
       $scope.error = "*IMAGE REQUIRED";
     }
@@ -41,13 +43,15 @@ angular.module('app.fileUpload', ['ngFileUpload'])
     if ($scope.files.length === 0) {
       $scope.flag = false;
       $scope.error = "*IMAGE REQUIRED";
+    } else if ($scope.files.length <= 3) {
+      $scope.error = "";
     }
   };
 
   $scope.changeFlag = function() {
     $scope.flag = true;
     if($scope.flag) {
-      $scope.error = " ";
+      $scope.error = "";
     }
   };
 });
