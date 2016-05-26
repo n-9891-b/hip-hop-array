@@ -3,6 +3,10 @@ body {
 }
 
 /* Disable ugly boxes around images in IE10 */
+a {
+  color: #4db6ac;
+}
+
 a img{
   border: 0px;
 }
@@ -145,16 +149,13 @@ a img{
   padding-bottom: 30px;
 }
 
-.android-create-character {
-  font-size: 21px;
-  padding-top: 400px;
+.mdl-card__title-text {
+  padding: 0px 50px 0px 50px;
 }
 
-  .android-create-character a {
-    text-decoration: none;
-    color: #767777;
-    font-weight: 300;
-  }
+#card_subhead {
+  font-weight: bold;
+}
 
 .android-screen-section {
   position: relative;
@@ -182,67 +183,6 @@ a img{
 .android-image-link {
   text-decoration: none;
 }
-
-.android-wear {
-  display: inline-block;
-  width: 160px;
-  margin-right: 32px;
-}
-
-  .android-wear .android-screen-image {
-    width: 40%;
-    z-index: 1;
-  }
-
-.android-phone {
-  display: inline-block;
-  width: 64px;
-  margin-right: 48px;
-}
-
-  .android-phone .android-screen-image {
-    width: 100%;
-    z-index: 1;
-  }
-
-.android-tablet {
-  display: inline-block;
-  width: 110px;
-  margin-right: 64px;
-}
-
-  .android-tablet .android-screen-image {
-    width: 100%;
-    z-index: 1;
-  }
-
-  .android-tablet .android-link {
-    display: block;
-    z-index: 2;
-  }
-
-.android-tv {
-  display: inline-block;
-  width: 300px;
-  margin-right: 80px;
-}
-
-  .android-tv .android-screen-image {
-    width: 100%;
-    z-index: 1;
-  }
-
-.android-auto {
-  display: inline-block;
-  width: 300px;
-  overflow: hidden;
-}
-
-  .android-auto .android-screen-image {
-    display: block;
-    height: 300px;
-    z-index: 1;
-  }
 
 .android-wear-section {
   position: relative;
@@ -426,6 +366,10 @@ a img{
   margin-right: 40px;
   margin-bottom: 40px;
   z-index: 900;
+}
+
+#errorMesssage {
+  color: #ef2b3b;
 }
 
 /**** Mobile layout ****/
