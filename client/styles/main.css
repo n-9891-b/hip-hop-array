@@ -41,15 +41,6 @@ a img{
   background: #4DB6AC;
 }
 
-.android-fab {
-  position: absolute;
-  right: 20%;
-  bottom: -26px;
-  z-index: 3;
-  background: #64ffda !important;
-  color: black !important;
-}
-
 .android-mobile-title {
   display: none !important;
 }
@@ -119,6 +110,7 @@ a img{
   width: auto;
   background-color: #f3f3f3;
   background-size: cover;
+  padding-bottom: 40px;
 }
 
 .loading-section {
@@ -184,35 +176,6 @@ a img{
   white-space: nowrap;
   overflow-x: auto;
 }
-
-.android-screen {
-  text-align: center;
-}
-
-.android-screen .android-link {
-  margin-top: 16px;
-  display: block;
-  z-index: 2;
-}
-
-.android-image-link {
-  text-decoration: none;
-}
-
-.android-link {
-  text-decoration: none;
-  color: #8bc34a !important;
-}
-
-  .android-link:hover {
-    color: #7cb342 !important;
-  }
-
-  .android-link .material-icons {
-    position: relative;
-    top: -1px;
-    vertical-align: middle;
-  }
 
 .android-alt-link {
   text-decoration: none;

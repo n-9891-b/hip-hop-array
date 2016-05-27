@@ -25,7 +25,7 @@ angular.module('app.fileUpload', ['ngFileUpload'])
         data: {photos: files}
       }).then(function(res){
         var totalRecipes = res.data.recipes;
-        $scope.recipes = totalRecipes.slice(0, 12);
+        $scope.recipes = totalRecipes;
         recipesFactory.totalRecipes = $scope.recipes;
 
         if (recipesFactory.totalRecipes.length > 0) {
