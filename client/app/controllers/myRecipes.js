@@ -8,7 +8,7 @@ angular.module('app.myRecipes', [])
   $scope.removeFromMyRecipes = function(recipe) {
     var index = recipesFactory.myRecipesStorage.indexOf(recipe);
     recipesFactory.myRecipesStorage.splice(index, 1);
-    $scope.myRecipesStorage = recipesFactory.myRecipesStorage;
+    recipe.blurred = false;
 
     if (recipesFactory.myRecipesStorage.length === 0) {
       $location.path('/error');

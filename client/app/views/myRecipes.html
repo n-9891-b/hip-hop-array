@@ -3,7 +3,7 @@
   <br/><br/>  
   <div class="myRecipes_cell" ng-repeat="recipe in myRecipesStorage">
     <div>
-      <img src="{{recipe.image_url}}" style="width: 300px; height: 175px;"/>
+      <img ng-src="{{recipe.image_url}}" style="width: 300px; height: 175px;"/>
       <img id="delete_icon" src="../../assets/x_delete_icon.png" style="width: 3%; height: 3%;" ng-click="removeFromMyRecipes(recipe)"/>
       <br/><br/>
       <span class="myRecipes_title">{{recipe.title}}</span><br/>
