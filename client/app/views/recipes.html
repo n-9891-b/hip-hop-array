@@ -3,6 +3,7 @@
   <div class="logo-font sub-slogan">click to add to your list</div>
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card" ng-click="addRemoveToList(recipe)" ng-repeat="recipe in totalRecipes">
+      <span ng-show="recipe.added">Added!</span>
       <div class="mdl-card__media" ng-class="{'active': recipe.blurred}">
         <img ng-src="{{recipe.image_url}}" style="height: 200px;">
       </div>

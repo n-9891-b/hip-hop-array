@@ -1,5 +1,8 @@
+'use strict';
+
 angular.module('app.index', [])
-.controller('indexCtrl', function($scope, $location, $anchorScroll, recipesFactory) {
+
+.controller('indexCtrl', ['$scope', '$location', '$anchorScroll', 'recipesFactory', function($scope, $location, $anchorScroll, recipesFactory) {
   $scope.scrollToTop = function(id) {
     $location.hash(id);
     $anchorScroll();
@@ -12,4 +15,4 @@ angular.module('app.index', [])
       $location.path('/myrecipes');
     }
   }
-});
+}]);
