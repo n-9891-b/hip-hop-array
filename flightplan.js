@@ -11,7 +11,6 @@ plan.target('production', [
     host: '159.203.193.78',
     username: 'nate',
     password: 'hiphoparray',
-    // port: 2222,
     agent: process.env.SSH_AUTH_SOCK
   },
 ]);
@@ -35,8 +34,7 @@ plan.remote(function(remote){
 
   remote.log('Install dependecies');
   remote.sudo('npm --production --prefix  ~/' + tmpDir + ' install ~/' + tmpDir, {user: username});
-  // remote.sudo('cd ~/' + tmpDir);
-  // ./node_modules/bower/bin/
+
   remote.sudo('~/' + tmpDir + '/node_modules/bower/bin/bower install ~/' + tmpDir + '/bower.json', {user: username});
   remote.sudo('cp -R ~/bower_components/ ~/' + tmpDir + '/client', {user: username});
 
