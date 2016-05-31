@@ -3,11 +3,12 @@
   <div class="logo-font sub-slogan">click to add to your list</div>
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card" ng-click="addToList(recipe)" ng-repeat="recipe in totalRecipes">
-      <div class="mdl-card__media">
+      <div class="mdl-card__media" ng-class="{'active': isActive}" ng-click="isActive=!isActive">
         <img src="{{recipe.image_url}}" style="height: 200px;">
       </div>
       <div class="mdl-card__title">
-         <a href="{{recipe.source_url}}" target="_blank"><h4 class="mdl-card__title-text">{{recipe.title}}</h4></a>
+        <a href="{{recipe.source_url}}" target="_blank"><span class="mdl-card__title-text">{{recipe.title}}</span></a>
+        <img id="recipes_add_icon" src="../../assets/ic_add.png" ng-click="isActive=!isActive"/>
       </div>
     </div>
   </div>

@@ -225,16 +225,34 @@ a img{
     padding-bottom: 24px;
   }
 
+.mdl-card__media {
+  background-color: #FBEDB8;
+  overflow: hidden;
+}
+
+.mdl-card__title {
+  background-color: #F3F3F3;
+  background: transparent;
+  height: auto;
+}
+
+.mdl-card__title-text {
+  font-size: 16px;
+  text-align: justify;
+}
+
 .android-card-container {
 }
 
   .android-card-container .mdl-card__media {
     overflow: hidden;
     background: transparent;
+    background-color: #FBEDB8;
   }
 
     .android-card-container .mdl-card__media img {
       width: 100%;
+      background-color: #FBEDB8;
     }
 
   .android-card-container .mdl-card__title {
@@ -243,7 +261,6 @@ a img{
   }
 
   .android-card-container .mdl-card__title-text {
-    color: black;
     height: auto;
   }
 
@@ -293,6 +310,14 @@ a img{
     top: 6px;
   }
 
+.active {
+  -webkit-filter: blur(2px);
+}
+
+.mdl-mega-footer--left-section {
+  padding-top: 80px;
+}
+
 #header_title {
   font-family: 'Hammersmith One', sans-serif;
   text-decoration: none;
@@ -309,21 +334,15 @@ a img{
   text-align: center;
 }
 
-#view-source {
-  position: fixed;
-  display: block;
-  right: 0;
-  bottom: 0;
-  margin-right: 40px;
-  margin-bottom: 40px;
-  z-index: 900;
-}
-
 #errorMesssage {
   color: #ef2b3b;
 }
 
 #delete_icon {
+  vertical-align: top;
+}
+
+#recipes_add_icon {
   vertical-align: top;
 }
 
