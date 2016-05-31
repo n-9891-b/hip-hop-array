@@ -2,7 +2,7 @@
 
 angular.module('app.fileUpload', ['ngFileUpload'])
 
-.controller('fileUploadCtrl', function($scope, $location, Upload, recipesFactory) {
+.controller('fileUploadCtrl', ['$scope', '$location', 'Upload', 'recipesFactory', function($scope, $location, Upload, recipesFactory) {
   $scope.flag = false;
   $scope.files = [];
 
@@ -54,4 +54,4 @@ angular.module('app.fileUpload', ['ngFileUpload'])
       $scope.error = "";
     }
   };
-});
+}]);
