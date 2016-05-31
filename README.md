@@ -1,5 +1,5 @@
 # HipHopArray
->Sick of free styling dinner, the Hip Hop Array concats pictures of food to give you on the fly recipe suggestions.
+>Sick of free styling dinner? PixelAte is a mobile web app that plugs into the latest image processing AIs in order serve up recipe suggestions from photos of food.
 
 >Hip Hop Array is best used:
 - At the grocery store when you're shopping to get ideas for what you can do based on what looks good in person
@@ -22,23 +22,22 @@
 1. [Team Bios](#team-bios)
 
 ## Usage
->Currently a web app, upload photos by draggin' and droppin' to the site
+>Currently a web app, upload photos by taking pictures with your camera phone (or by dragging and dropping pictures from your computer).
 
-- Find our app at: https://blooming-coast-87569.herokuapp.com/
-- Mobile functionality coming soon!
+- Find us at: http://pxl-8.com
 
 ## Development
 - Node / Express
 - Angular
+- Mocha
 
 ### Installing Dependencies
 From within the root directory:
 ```sh
-sudo npm install -g bower
 npm install
 bower install
 ```
-Grunt file coming soon!!
+Gulp file coming soon!!
 
 ## Team Bios
 - __Nate Blain__:
