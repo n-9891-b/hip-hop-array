@@ -2,8 +2,12 @@
   <div class="logo-font recipes-slogan">My Recipes</div>
   <br/><br/>  
   <div class="myRecipes_cell" ng-repeat="recipe in myRecipesStorage">
-    <img src="{{recipe.image_url}}" style="width: 300px; height: 175px;"/><br/><br/>
-    <span class="myRecipes_title">{{recipe.title}}</span><br/>
-    <a class="myRecipes_url" href="{{recipe.source_url}}" target="_blank">click for recipe</a>
+    <div>
+      <img ng-src="{{recipe.image_url}}" style="width: 300px; height: 175px;"/>
+      <img id="delete_icon" src="../../assets/x_delete_icon.png" style="width: 3%; height: 3%;" ng-click="removeFromMyRecipes(recipe)"/>
+      <br/><br/>
+      <span class="myRecipes_title">{{recipe.title}}</span><br/>
+      <a class="myRecipes_url" href="{{recipe.source_url}}" target="_blank">click for recipe</a>
+    </div>
   </div>
 </div>
