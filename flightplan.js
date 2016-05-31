@@ -1,15 +1,16 @@
 var plan = require('flightplan');
 
 var appName = 'hip-hop-array';
-var username = 'root';
+var username = 'nate';
 var startFile = 'server/server.js';
 // configuration
 var tmpDir = appName + '-' + new Date().getTime();
-
+console.log(process.env.SSH_AUTH_SOCK)
 plan.target('production', [
   {
     host: '159.203.193.78',
-    username: 'root',
+    username: 'nate',
+    password: 'hiphoparray',
     // port: 2222,
     agent: process.env.SSH_AUTH_SOCK
   },
